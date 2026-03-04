@@ -1,3 +1,29 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+:root {
+  --background: 210 80% 98%;
+  --foreground: 222 20% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 20% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 20% 20%;
+  --primary: 174 65% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 25% 93%;
+  --secondary-foreground: 222 15% 35%;
+  --muted: 210 20% 95%;
+  --muted-foreground: 215 15% 50%;
+  --accent: 35 90% 52%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 20% 88%;
+  --input: 214 20% 88%;
+  --ring: 174 65% 40%;
+  --radius: .75rem;
+}
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}

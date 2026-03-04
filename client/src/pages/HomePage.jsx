@@ -1,24 +1,18 @@
-import { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {t} from "../components/text";
 function HomePage(){ 
-    const [ans,setAns] = useState("");
-    function answer(e){
-        const v = e.target.value
-        if(v === "yes"){
-            setAns("you lie")
-        }
-        else{
-            setAns("you brutal")
-        }
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/WritePage");
     }
-
+   
     return (
-        <div className="px-6 py-5">
-            <h1>Can u feel ma heart</h1>
-            <div className="flex gap-3">
-            <button value="yes" onClick={answer} className="btn btn-success">yes</button>
-            <button value="no" onClick={answer} className="btn btn-error">no</button>
-            </div>
-            <h2>{ans}</h2>
+        <div className="min-h-screen flex flex-col items-center justify-center">
+            <h1 className="text-5xl font-bold mb-4">{t.Home.title}</h1>
+             <h2 className="text-xl text-grey-800">{t.Home.context}</h2>
+             <div className="flex my-10">
+             <button className="text-lg rounded-3xl text-white btn btn-lg btn-success"onClick={handleClick}>{t.Home.button}</button>
+             </div>
         </div>
     )
 }
